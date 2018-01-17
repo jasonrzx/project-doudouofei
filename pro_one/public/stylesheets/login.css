@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+}
+body {
+	font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #192E32;
+	background: url(../images/body_bj.jpg) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	cursor: pointer;
+}
+li{
+	list-style: none;
+}
+.login-all{
+	height: 100%;
+	width: 100%;
+	background: url(../images/ecshop-bg.png) no-repeat center center;
+	background-size: cover; 
+	position: relative;
+}
+.login-all>.login-logo{
+	height: 44px;
+	padding: 40px 0 0 50px;
+}
+.login-all>.login-box{
+	position: absolute;
+	left: 50%;
+	margin-left: -237px;
+	width: 475px;
+	height: 510px;
+	top: 50%;
+	margin-top: -255px;
+}
+.login-all>.login-box>.head-logo{
+	width: 348px;
+	margin: 0 auto;
+}
+.login-all>.login-box>.head-logo>.ecshop-logo{
+	width: 248px;
+	height: 65px;
+	margin-left: 66px;
+}
+.login-all>.login-box>.login-main{
+	position: relative;
+	height: 350px;
+	overflow: hidden;
+	padding-bottom: 42px;
+	background: url(../images/icloud-bar.png) no-repeat 0 bottom;
+	margin-top: 50px;
+}
+.login-all>.login-box>.login-main>.login-panel{
+	position: absolute;
+	left: 16px;
+	background: rgba(255, 255, 255, 0.85);
+	width: 302px;
+	height: 322px;
+	padding: 5px 70px 25px;
+
+}
+.login-all>.login-box>.login-main>.login-panel>.controls{
+	position: relative;
+	height: 50px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+.login-all>.login-box>.login-main>.login-panel>.controls>input{
+	border: none;
+	background: #fff;
+	color: #8a8a8a;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	text-indent: 50px;
+	outline: none;
+}
+.login-all>.login-box>.login-main>.login-panel>.controls>img{
+	position: absolute;
+	top: 14px;
+	left: 16px;
+}
+.login-all>.login-box>.login-main>.login-panel>.controls>.verify{
+	position: absolute;
+	left: 188px;
+	top: 6px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-first{
+	border-radius: 5px 5px 0 0;
+	margin-top: 46px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-second{
+	border-top: none;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-third{
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-last{
+	width: 100%;
+	height: 51px;
+	margin-top: 20px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-last>#btnlogin{
+	width: 100%;
+	height: 100%;
+	background: #fc7878;
+	border: none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 4px;
+	border-radius: 4px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside{
+	margin-top: 12px;
+	position: relative;
+	overflow: hidden;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside>#login-save{
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin: 2px 8px 0 0;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside>label{
+	color: #666;
+	float: left;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside>a{
+	color: #41A5E1 !important;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside>.login-forget{
+	float: left;
+	margin-left: 25px;
+}
+.login-all>.login-box>.login-main>.login-panel>.login-aside>.login-home{
+	float: right;
+}

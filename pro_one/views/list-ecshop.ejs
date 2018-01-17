@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/list-ecshop.css">
+</head>
+<body>
+	<div class="ecshop-head">
+		<span class="ecshop-title"><a>ECSHOP 管理中心</a></span>
+		<span class="goods-list">- 商品列表</span>
+		<span class="ecshop-help"><a><img src="images/jnsy.png"></a></span>
+		<span class="list-addgoods"><a>添加新商品</a></span>
+	</div>
+	<div class="ecshop-form">
+		<div class="ecshop-find">
+			<img src="images/icon_search.gif" class="find-img">
+			<select>
+				<option value="0">所有分类</option>
+				<option value="132">钻石</option>
+				<option value="170">    裤子</option>
+				<option value="173">        休闲裤</option>
+				<option value="623">        休闲短裤</option>
+				<option value="174">        牛仔裤</option>
+				<option value="171">        西裤</option>
+				<option value="172">        牛仔中裤</option>
+				<option value="629">        休闲分裤</option>
+				<option value="190">    衬衫</option>
+				<option value="193">        短袖衬衫</option>
+				<option value="194">        长袖衬衫</option>
+				<option value="160">    外套</option>
+				<option value="167">        棉服</option>
+				<option value="163">        风衣</option>
+				<option value="168">        羽绒服</option>
+				<option value="164">        大衣</option>
+				<option value="161">        皮衣/皮草</option>
+				<option value="169">        夹克</option>
+				<option value="166">        西服</option>
+				<option value="162">        卫衣</option>
+				<option value="154">    内衣</option>
+				<option value="159">        内裤</option>
+				<option value="156">        内衣/套装</option>
+				<option value="157">        袜子</option>
+				<option value="158">        家居服</option>
+				<option value="182">    POLO衫</option>
+				<option value="188">        短袖POLO衫</option>
+			</select>
+			<select>
+				<option value="0">所有品牌</option>
+				<option value="44">kk</option>
+				<option value="32">溢彩年华</option>
+				<option value="31">EVENY</option>
+				<option value="30">圣迪奥</option>
+				<option value="29">韩都衣舍</option>
+				<option value="28">betu百图</option>
+				<option value="27">艾夫斯</option>
+				<option value="26">太平鸟</option>
+				<option value="25">O.SA</option>
+				<option value="33">空间大师</option>
+				<option value="34">美好家</option>
+				<option value="43">帮宝适</option>
+				<option value="42">贝亲</option>
+				<option value="41">雅培</option>
+				<option value="40">好事达</option>
+				<option value="39">千弘</option>
+				<option value="38">美亿佳</option>
+				<option value="37">大豪</option>
+				<option value="36">宝优妮</option>
+				<option value="24">裂帛</option>
+				<option value="23">JNBY 江南布衣</option>
+				<option value="22">LILY</option>
+				<option value="9">联想</option>
+				<option value="8">惠普</option>
+				<option value="7">美的</option>
+				<option value="6">天翼</option>
+				<option value="5">漫步者</option>
+				<option value="4">希捷</option>
+				<option value="3">方正</option>
+				<option value="2">APPLE</option>
+				<option value="10">金立</option>
+				<option value="11">恒基伟业</option>
+			</select>
+			<select>
+				<option value="0">全部</option>
+				<option value="">精品</option>
+				<option value="">新品</option>
+				<option value="">热销</option>
+				<option value="">特价</option>
+				<option value="">全部推荐</option>
+			</select>
+			<select>
+				<option value="">全部</option>
+				<option value="1">上架</option>
+				<option value="0">下架</option>
+			</select>
+			<label for="key" style="margin-right: 3px">关键字</label><input type="text" name="key" id="key">
+			<input type="submit" name="" value="搜索" class="ecshop-btn">
+		</div>
+	</div>
+	<div class="ecshop-body">
+		<table class="ecshop-bylist" cellspacing="1" cellpadding="3">
+			<tbody>
+				<tr>
+					<th>
+						<input type="checkbox">
+						<a>编号</a>
+						<img src="images/sort_desc.gif">
+					</th>
+					<th><a href="">商品名称</a></th>
+					<th><a href="">货号</a></th>
+					<th><a href="">价格</a></th>
+					<th><a href="">上架</a></th>
+					<th><a href="">精品</a></th>
+					<th><a href="">新品</a></th>
+					<th><a href="">热销</a></th>
+					<th><a href="">推荐排序</a></th>
+					<th><a href="">库存</a></th>
+					<th><a href="">虚拟销量</a></th>
+					<th>操作</th>
+				</tr>
+				<tr></tr>
+				<tr class="ecshop-none">
+					<td colspan="10" style="background: #fff;">没有找到任何记录</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="ecshop-page" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<div class="page-div">
+							<span>总计</span>
+							<span>0</span>
+							<span>个记录分为</span>
+							<span>1</span>
+							<span>页当前第</span>
+							<span>1</span>
+							<span>页，每页</span>
+							<input type="text" value="15" size="3">
+							<span>
+								<a href="">第一页</a>
+								<a href="">上一页</a>
+								<a href="">下一页</a>
+								<a href="">最末页</a>
+								<select>
+									<option value="1">1</option>
+								</select>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="ecshop-ok">
+		<select>
+			<option value="">请选择...</option>
+			<option value="">回收站</option>
+			<option value="">上架</option>
+			<option value="">下架</option>
+			<option value="">精品</option>
+			<option value="">取消精品</option>
+			<option value="">新品</option>
+			<option value="">取消新品</option>
+			<option value="">热销</option>
+			<option value="">取消热销</option>
+			<option value="">转移到分类</option>
+		</select>
+		<input type="submit" name="" value="确定" id="ecshop-okbtn">
+	</div>
+	<div class="ecshop-foot">
+		<span>共执行 7 个查询，用时 0.024639 秒，Gzip 已禁用，内存占用 3.536 MB</span><br>
+		<span>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</span>
+	</div>
+</body>
+</html>

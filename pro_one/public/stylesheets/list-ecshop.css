@@ -1,0 +1,111 @@
+.ecshop-head{
+	border-bottom: 1px solid #ccc;
+	padding: 7px 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.ecshop-head>.ecshop-title>a{
+	font-size: 18px;
+	color: #333;
+}
+.ecshop-head>.ecshop-title>a:hover{
+	color: #EB8A3D;
+}
+.ecshop-head>.goods-list{
+	color: #4c4c4c;
+	font-size: 18px;	
+}
+.ecshop-head>.ecshop-help{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.ecshop-head>.list-addgoods>a{
+	float: right;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 10px 0 23px;
+	background: #c43926 url(../images/icon_add02.gif) no-repeat 6px center;
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+}
+.ecshop-form{
+	background: #f3f3f3 url(../images/th_bg.gif) repeat-x;
+	border: 1px solid #ddd;
+	padding: 5px;
+	color: #808080;
+	margin-bottom: 10px;
+}
+.ecshop-form>.ecshop-find>img{
+	vertical-align: middle;
+}
+.ecshop-form>.ecshop-find>select{
+	vertical-align: middle;
+	outline: none;
+}
+.ecshop-form>.ecshop-find>input{
+	outline: none;
+}
+.ecshop-form>.ecshop-find>#key{
+	width: 105px;
+}
+.ecshop-form>.ecshop-find>.ecshop-btn, .ecshop-ok>#ecshop-okbtn{
+	padding: 5px 15px;
+	margin: 2px 2px;
+	border: none;
+	background: #ff3f3f;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.ecshop-foot{
+	background: #f3f3f3 url(../images/th_bg.gif) repeat-x;
+	border: 1px solid #ddd;
+	padding: 15px;
+	color: #9CACAF;
+	margin: 10px 0;
+	text-align: center;
+}
+.ecshop-body{
+	width: 100%;
+}
+.ecshop-body>.ecshop-bylist{
+	width: 100%;
+}
+.ecshop-body>.ecshop-bylist{
+	width: 100%;
+	background: #ddd;
+}
+.ecshop-body>.ecshop-bylist>tbody>tr>th{
+    line-height: 39px;
+    background: #f3f3f3 url("../images/th_bg.gif");
+}
+.ecshop-body>.ecshop-bylist>tbody>tr>th>a{
+	color: #111;
+}
+.ecshop-body>.ecshop-bylist>tbody>.ecshop-none>td{
+	padding: 10px;
+	line-height: 39px;
+	color: #666;
+	text-align: center;
+}
+.ecshop-body>.ecshop-page{
+	width: 100%;
+	background: #ddd;
+}
+.ecshop-body>.ecshop-page>tbody>tr>td{
+	background: #fff;
+	padding: 5px;
+	line-height: 39px;
+}
+.ecshop-body>.ecshop-page>tbody>tr>td>.page-div{
+	float: right;
+}
+.ecshop-body>.ecshop-page>tbody>tr>td>.page-div>span>a{
+	color: #192E32;
+}
+.ecshop-body>.ecshop-page>tbody>tr>td>.page-div>span>a:hover{
+	color: #9D7250;
+	text-decoration: underline;
+}

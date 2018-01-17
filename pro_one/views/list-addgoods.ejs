@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/list-addgoods.css">
+	<script type="text/javascript" src="/javascripts/jquery-1.11.3.js"></script>	
+<body>
+	<div id="addgoods-box"></div>
+	<div class="addgoods-head">
+		<span class="add-title"><a>ECSHOP 管理中心</a></span>
+		<span class="add-list">- 添加新商品</span>
+		<span class="add-help"><a><img src="images/jnsy.png"></a></span>
+		<span class="list-addgoods"><a>添加新商品</a></span>
+	</div>
+	<div class="addgoods-main">
+		<div class="goodsmain-list">
+			<ul class="goods-list">
+				<li class="goods-front"><a>通用信息</a></li>
+				<li><a>详细描述</a></li>
+				<li><a>其他信息</a></li>
+				<li><a>商品属性</a></li>
+				<li><a>商品相册</a></li>
+				<li><a>关联商品</a></li>
+				<li><a>配件</a></li>
+				<li><a>关联文章</a></li>
+			</ul>
+		</div>
+		<!--first-->
+		<div id="goods-message" class="goods-body goodsbox-click">
+			<form>
+				<table id="godosd-info">
+					<tbody>
+						<tr>
+							<td class="goods-label">商品名称 :</td>
+							<td>
+								<input type="text" name="" size="30">
+								<select>
+									<option value="">字体样式</option>
+									<option value="">加粗</option>
+									<option value="">斜体</option>
+									<option value="">下划线</option>
+									<option value="">删除线</option>
+								</select>
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="/images/notice.gif"></a>商品货号:</td>
+							<td>
+								<input type="text" name=""><br>
+								<span class="num-else">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品分类:</td>
+							<td>
+								<select style="width: 160px">
+									<option value="">请选择...</option>
+									<option value="">钻石</option>
+									<option value="">    裤子</option>
+									<option value="">        休闲裤</option>
+									<option value="">        休闲短裤</option>
+									<option value="">        牛仔裤</option>
+									<option value="">        西裤</option>
+									<option value="">        牛仔中裤</option>
+								</select>
+								<a class="add-diff">添加分类</a>
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">扩展分类:</td>
+							<td><input id="add-btn"  class="goods-choose" type="button" value="添加"></td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品品牌:</td>
+							<td>
+								<select>
+									<option value="0">请选择...</option>
+									<option value="44">kk</option>
+									<option value="32">溢彩年华</option>
+									<option value="31">EVENY</option>
+									<option value="30">圣迪奥</option>
+									<option value="29">韩都衣舍</option>
+									<option value="28">betu百图</option>
+									<option value="27">艾夫斯</option>
+									<option value="26">太平鸟</option>
+									<option value="25">O.SA</option>
+									<option value="33">空间大师</option>
+									<option value="34">美好家</option>
+									<option value="35">生活诚品</option>
+								</select>
+								<a class="add-diff">添加品牌</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">本店售价:</td>
+							<td>
+								<input type="text" value="0">
+								<input id="goods-calculate" type="button" value="按市场价计算">
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>会员价格:</td>
+							<td>
+								<span>注册用户</span><input type="text" value="-1">
+								<span>代销用户</span><input type="text" value="-1">
+								<span>vip</span><input type="text" value="-1"><br>
+								<span class="num-else">会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>商品优惠价格:</td>
+							<td>
+								<a class="add">[+]</a>
+								<span>优惠数量</span><input type="text">
+								<span>优惠价格</span><input type="text"><br>
+								<span class="num-else">购买数量达到优惠数量时享受的优惠价格</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">市场售价:</td>
+							<td>
+								<input type="text" value="0">
+								<input type="button" value="取整数">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">虚拟销量:</td>
+							<td><input type="text" value="0"></td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>赠送消费积分数:</td>
+							<td>
+								<input type="text" value="-1"><br>
+								<span class="num-else">购买该商品时赠送消费积分数,-1表示按商品价格赠送</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a> 赠送等级积分数:</td>
+							<td>
+								<input type="text" value="-1"><br>
+								<span class="num-else">购买该商品时赠送等级积分数,-1表示按商品价格赠送</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>  积分购买金额:</td>
+							<td>
+								<input type="text" value="0"><br>
+								<span class="num-else">(此处需填写金额)购买该商品时最多可以使用积分的金额</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><label for="goods-promote"><input type="checkbox" id="goods-promote">促销价:</label></td>
+							<td><input type="text" value="0"></td>
+						</tr>
+						<tr>
+							<td class="goods-label">促销日期:</td>
+							<td>
+								<input type="text" value="2018-01-07">
+								<input class="goods-choose" type="button" value="选择">
+								<span>-</span>
+								<input type="text" value="2018-02-16">
+								<input class="goods-choose" type="button" value="选择">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">上传商品图片:</td>
+							<td>
+								<input type="file" name="">
+								<img src="images/no.gif"><br>
+								<input type="text" placeholder="商品图片外部URL" size="40">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">上传商品缩略图:</td>
+							<td>
+								<input type="file" name="">
+								<img src="images/no.gif"><br>
+								<input type="text" placeholder="商品缩略图外部URL" size="40"><br>
+								<label for="goods_thumb"><input id="goods_thumb" name="goods_thumb" type="checkbox" checked="true">自动生成商品缩略图</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<!--second-->
+		<div class="goods-body">
+			<textarea></textarea>
+		</div>
+		<!--third-->
+		<div id="goods-other" class="goods-body">
+			<form>
+				<table>
+					<tbody>
+						<tr>
+							<td class="goods-label">商品重量:</td>
+							<td>
+								<input type="text" name="">
+								<select>
+									<option>千克</option>
+									<option>克</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a> 商品库存数量:</td>
+							<td>
+								<input type="text" value="1" size="20"><br>
+								<span class="num-else">库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">库存警告数量:</td>
+							<td><input type="text" value="1" size="20"></td>
+						</tr>
+						<tr>
+							<td class="goods-label">加入推荐:</td>
+							<td>
+								<input type="checkbox" value="" name="best">精品
+								<input type="checkbox" value="" name="new">新品
+								<input type="checkbox" value="" name="hot">热销
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">上架:</td>
+							<td><input type="checkbox" name="" checked="checked">打勾表示允许销售，否则不允许销售。</td>
+						</tr>
+						<tr>
+							<td class="goods-label">能作为普通商品销售:</td>
+							<td><input type="checkbox" name="" checked="checked">打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。</td>
+						</tr>
+						<tr>
+							<td class="goods-label">是否为免运费商品</td>
+							<td><input type="checkbox" name="">打勾表示此商品不会产生运费花销，否则按照正常运费计算。</td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品关键词:</td>
+							<td><input type="text" name="" size="40">用空格分隔</td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品简单描述:</td>
+							<td><textarea cols="40" rows="3"></textarea></td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>  商家备注:</td>
+							<td><textarea cols="40" rows="3"></textarea><br>
+								<span  class="num-else">仅供商家自己看的信息</span>
+							</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</form>
+		</div>
+		<!--fouth-->
+		<div id="goods-nature" class="goods-body">
+			<form>
+				<table>
+					<tbody>
+						<tr>
+							<td class="goods-label"><a><img src="/images/notice.gif"></a>商品类型:</td>
+							<td>
+								<select>
+									<option value="">请选择商品类型</option>
+									<option value="">书</option>
+									<option value="">音乐</option>
+									<option value="">电影</option>
+									<option value="">手机</option>
+									<option value="">笔记本电脑</option>
+									<option value="">数码相机</option>
+									<option value="">数码摄像机</option>
+									<option value="">化妆品</option>
+									<option value="">精品手机</option>
+									<option value="">服装</option>
+									<option value="">液晶电视</option>
+									<option value="">美妆</option>
+								</select><br>
+								<span class="num-else">请选择商品的所属类型，进而完善此商品的属性</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<!--fivth-->
+		<div id="goods-photo" class="goods-body">
+			<form>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<a>[+]</a>
+								<span>图片描述</span>
+								<input type="text" name="" size="20">
+								<span>上传文件</span>
+								<input type="file" name="">
+								<input type="text" placeholder="或者输入外部图片链接地址" size="40">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<!--sixth-->
+		<div class="goods-body"></div>
+		<!--seventh-->
+		<div class="goods-body"></div>
+		<!--eighth-->
+		<div class="goods-body"></div>
+		<div class="goods-last">
+			<input class="goods-choose" type="button" value="确定">
+			<input class="goods-choose" type="button" value="重置">
+		</div>
+	</div>
+	<div class="addgoods-foot">
+		<span>共执行 7 个查询，用时 0.024639 秒，Gzip 已禁用，内存占用 3.536 MB</span><br>
+		<span>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</span>
+	</div>
+</body>
+<script type="text/javascript" src="/javascripts/list-addgoods.js"></script>
+</html>

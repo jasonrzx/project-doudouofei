@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="addgoods-head">
+		<span class="add-title"><a>ECSHOP 管理中心</a></span>
+		<span class="add-list">- 添加新商品</span>
+		<span class="add-help"><a><img src="images/jnsy.png"></a></span>
+		<span class="list-addgoods"><a>添加新商品</a></span>
+	</div>
+	<div class="addgoods-main">
+		<div class="goodsmain-list">
+			<ul class="goods-list">
+				<li class="goods-front"><a>通用信息</a></li>
+				<li><a>详细描述</a></li>
+				<li><a>其他信息</a></li>
+				<li><a>商品属性</a></li>
+				<li><a>商品相册</a></li>
+				<li><a>关联商品</a></li>
+				<li><a>配件</a></li>
+				<li><a>关联文章</a></li>
+			</ul>
+		</div>
+		<div class="goods-body">
+			<form>
+				<table id="godosd-info">
+					<tbody>
+						<tr>
+							<td class="goods-label">商品名称 :</td>
+							<td>
+								<input type="text" name="" size="30">
+								<select>
+									<option value="">字体样式</option>
+									<option value="">加粗</option>
+									<option value="">斜体</option>
+									<option value="">下划线</option>
+									<option value="">删除线</option>
+								</select>
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="/images/notice.gif"></a>商品货号:</td>
+							<td>
+								<input type="text" name=""><br>
+								<span class="num-else">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品分类:</td>
+							<td>
+								<select style="width: 160px">
+									<option value="">请选择...</option>
+									<option value="">钻石</option>
+									<option value="">    裤子</option>
+									<option value="">        休闲裤</option>
+									<option value="">        休闲短裤</option>
+									<option value="">        牛仔裤</option>
+									<option value="">        西裤</option>
+									<option value="">        牛仔中裤</option>
+								</select>
+								<a class="add-diff">添加分类</a>
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">扩展分类:</td>
+							<td><input id="add-btn"  class="goods-choose" type="button" value="添加"></td>
+						</tr>
+						<tr>
+							<td class="goods-label">商品品牌:</td>
+							<td>
+								<select>
+									<option value="0">请选择...</option>
+									<option value="44">kk</option>
+									<option value="32">溢彩年华</option>
+									<option value="31">EVENY</option>
+									<option value="30">圣迪奥</option>
+									<option value="29">韩都衣舍</option>
+									<option value="28">betu百图</option>
+									<option value="27">艾夫斯</option>
+									<option value="26">太平鸟</option>
+									<option value="25">O.SA</option>
+									<option value="33">空间大师</option>
+									<option value="34">美好家</option>
+									<option value="35">生活诚品</option>
+								</select>
+								<a class="add-diff">添加品牌</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">本店售价:</td>
+							<td>
+								<input type="text" value="0">
+								<input id="goods-calculate" type="button" value="按市场价计算">
+								<span class="require-field">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>会员价格:</td>
+							<td>
+								<span>注册用户</span><input type="text" value="-1">
+								<span>代销用户</span><input type="text" value="-1">
+								<span>vip</span><input type="text" value="-1"><br>
+								<span class="num-else">会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每个等级指定一个固定价格</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>商品优惠价格:</td>
+							<td>
+								<a class="add">[+]</a>
+								<span>优惠数量</span><input type="text">
+								<span>优惠价格</span><input type="text"><br>
+								<span class="num-else">购买数量达到优惠数量时享受的优惠价格</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">市场售价:</td>
+							<td>
+								<input type="text" value="0">
+								<input type="button" value="取整数">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">虚拟销量:</td>
+							<td><input type="text" value="0"></td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>赠送消费积分数:</td>
+							<td>
+								<input type="text" value="-1"><br>
+								<span class="num-else">购买该商品时赠送消费积分数,-1表示按商品价格赠送</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a> 赠送等级积分数:</td>
+							<td>
+								<input type="text" value="-1"><br>
+								<span class="num-else">购买该商品时赠送等级积分数,-1表示按商品价格赠送</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><a><img src="images/notice.gif"></a>  积分购买金额:</td>
+							<td>
+								<input type="text" value="0"><br>
+								<span class="num-else">(此处需填写金额)购买该商品时最多可以使用积分的金额</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label"><label for="goods-promote"><input type="checkbox" id="goods-promote">促销价:</label></td>
+							<td><input type="text" value="0"></td>
+						</tr>
+						<tr>
+							<td class="goods-label">促销日期:</td>
+							<td>
+								<input type="text" value="2018-01-07">
+								<input class="goods-choose" type="button" value="选择">
+								<span>-</span>
+								<input type="text" value="2018-02-16">
+								<input class="goods-choose" type="button" value="选择">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">上传商品图片:</td>
+							<td>
+								<input type="file" name="">
+								<img src="images/no.gif"><br>
+								<input type="text" placeholder="商品图片外部URL" size="40">
+							</td>
+						</tr>
+						<tr>
+							<td class="goods-label">上传商品缩略图:</td>
+							<td>
+								<input type="file" name="">
+								<img src="images/no.gif"><br>
+								<input type="text" placeholder="商品缩略图外部URL" size="40"><br>
+								<label for="goods_thumb"><input id="goods_thumb" name="goods_thumb" type="checkbox" checked="true">自动生成商品缩略图</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div class="goods-last">
+			<input class="goods-choose" type="button" value="确定">
+			<input class="goods-choose" type="button" value="重置">
+		</div>
+	</div>
+</body>
+</html>

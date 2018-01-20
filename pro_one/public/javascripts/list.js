@@ -34,15 +34,12 @@ $(".list-ecshop").load("/list-ecshop");
 
 //分页效果        
 function update(){
-	//console.log( $(".sel-box option:selected").text()||1);
-	var pagegoods = parseInt($(".page-num").val());
-	var pagegood = (pagegoods>0)?pagegoods:1;
 	$.ajax({
 		url: "/goods/api/updategoods",
 		type: "post",
 		data: {
 			condition: "",
-			perPageCnt: parseInt(pagegood)   ,
+			perPageCnt: $(".page-num").val(),
 			pageNO: $(".sel-box option:selected").text()||1
 		},
 		success: function(res){
@@ -51,6 +48,7 @@ function update(){
 		}
 	})
 }
+update(); //页面刷新自运行函数
 //通过调取数据库创建列表
 function Findcreate(elem, data, sel, page, key){
 	var that =this;
@@ -68,36 +66,43 @@ function Findcreate(elem, data, sel, page, key){
 	//搜索按键模糊查询
 	$(this.key).find(".ecshop-btn").unbind("click");
 	$(this.key).find(".ecshop-btn").click(function(){
+		$(".add-goodslist").remove();
 		that.SearchClick($(this));
 	})
 	//上一页
 	$(this.page).find(".page-up").unbind("click");
-	$(this.page).find(".page-up").click(function(e){
-		e.stopPropagation();
+	$(this.page).find(".page-up").click(function(){
+		$(".add-goodslist").remove();
 		that.UpClick($(this));
 	})
 	//下一页
 	$(this.page).find(".page-next").unbind("click");
-	$(this.page).find(".page-next").click(function(e){
-		e.stopPropagation();
+	$(this.page).find(".page-next").click(function(){
+		$(".add-goodslist").remove();
 		that.NextClick($(this));
 	})
 	//首页
 	$(this.page).find(".page-first").unbind("click");
-	$(this.page).find(".page-first").click(function(e){
-		e.stopPropagation();
+	$(this.page).find(".page-first").click(function(){
+		$(".add-goodslist").remove();
 		that.FirstClick($(this));
 	})
 	//末页
 	$(this.page).find(".page-last").unbind("click");
-	$(this.page).find(".page-last").click(function(e){
-		e.stopPropagation();
+	$(this.page).find(".page-last").click(function(){
+		$(".add-goodslist").remove();
 		that.LastClick($(this));
 	})
 	//每页个数聚焦事件
 	$(this.page).find(".page-num").unbind("input propertychange");
 	$(this.page).find(".page-num").bind("input propertychange", function(){
+		$(".add-goodslist").remove();
 		that.Focus($(this));
+	})
+	//select菜单点击事件
+	$(this.page).find(".sel-box>option").unbind("click");
+	$(this.page).find(".sel-box>option").click(function(){
+		$(".add-goodslist").remove();
 	})
 }
 Findcreate.prototype = {
@@ -105,8 +110,7 @@ Findcreate.prototype = {
 		$(this.page).find(".page-all").html(this.dd); //总计商品
 		$(this.page).find(".page-only").html(this.ys); //分为的页码数
 		$(this.page).find(".page-now").html(this.data.pageNO); //当前页
-		$(".add-goodslist").remove();
-		
+			
 		//循环创建商品
 		var len = $(this.data.data).length;
 		for(var i=0; i<len; i++){
@@ -135,6 +139,7 @@ Findcreate.prototype = {
 			`
 			$(this.elem).append(str);
 		}
+
 		$(this.sel).find("option").remove(); //移除select创建option
 		//创建option
 		for(var j=1; j<=this.ys; j++){

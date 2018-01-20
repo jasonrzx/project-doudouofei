@@ -109,7 +109,7 @@ li{
 	height: 51px;
 	margin-top: 20px;
 }
-.login-all>.login-box>.login-main>.login-panel>.login-last>#btnlogin{
+.login-all>.login-box>.login-main>.login-panel>.login-last>.login-skip>#btnlogin{
 	width: 100%;
 	height: 100%;
 	background: #fc7878;

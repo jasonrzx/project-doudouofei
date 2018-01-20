@@ -19,8 +19,7 @@ router.post('/api/loginajax', function(req, res, next) {
 		code: 1,
 		message: '登录成功！'
 	};
-	DemoModel.find({username: username, psw: psw, verify: verify}, function(err, docs){ 
-		console.log(docs)
+	DemoModel.find({username: username, psw: psw, verify: verify }, function(err, docs){
 		if(docs.length == 0){
 			result.code = -101;
 			result.message = "登陆失败， 请修改用户名或密码。";

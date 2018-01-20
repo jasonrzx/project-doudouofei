@@ -9,11 +9,12 @@ $("#btnlogin").click(function(){
 		},
 		success: function(res){
 			console.log(res);
-			if(code==1){
+			if(res.code==1){
 				alert(res.message);
+				location.href = "list";
 			}else{
 				alert(res.message);
 			}
 		}
-	})
+	}) 
 })

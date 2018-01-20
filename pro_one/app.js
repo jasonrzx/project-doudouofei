@@ -14,6 +14,10 @@ var users = require('./routes/users');
 var goods = require('./routes/goods');
 
 var app = express();
+// app.all("*",function(req,res,next){
+// 	res.setHeader('Access-Control-Allow-Origin','*')
+// 	next() //把请求传递给后续的程序 （让下一个程序继续执行）
+// })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -30,21 +30,21 @@
 	color: #fff;
 	text-align: center;
 }
-.addgoods-main{
+.list-revise{
 	background: #f3f3f3;
 	border: 1px solid #d7d7d7;
 	margin-bottom: 10px;
 	padding: 1px;
 }
-.addgoods-main>.goodsmain-list{
+.list-revise>.goodsmain-list{
 	background: #efefef;
 	padding-left: 10px;
 	height: 39px;
 }
-.addgoods-main>.goodsmain-list>ul{
+.list-revise>.goodsmain-list>ul{
 	margin-top: 2px;
 }
-.addgoods-main>.goodsmain-list>ul>li{
+.list-revise>.goodsmain-list>ul>li{
 	padding: 0 20px;
 	text-align: center;
 	font-size: 13px;
@@ -56,20 +56,20 @@
 .goods-front{
 	background: #fefefe;
 }
-.addgoods-main>.goodsmain-list>ul>li>a{
+.list-revise>.goodsmain-list>ul>li>a{
 	display: inline-block;
 	height: 100%;
 	width: 100%;
 }
-.goods-body{
+.revise-message{
 	padding: 10px;
 	background: #fefefe;
 }
-.goods-body>form>table{
+.revise-message>form>table{
 	width: 90%;
 	margin: 0 auto;
 }
-.goods-body>form>table>tbody>tr>.goods-label{
+.revise-message>form>table>tbody>tr>.goods-label{
 	text-align: right;
 	vertical-align: top;
 	font-weight: bold;
@@ -77,66 +77,30 @@
 	width: 30%;
 	line-height: 30px;
 }
-.goods-body>form>table>tbody>tr>td input{
+.revise-message>form>table>tbody>tr>td input{
 	margin: 5px 0;
 	height: 23px;
 	vertical-align: middle;
 }
-.goods-body>form>table>tbody>tr>td select{
-	height: 23px;
-}
-.goods-body>form>table>tbody>tr>td>.require-field{
-	margin-left: 12px;
-	color: red;
-}
-.goods-body>form>table>tbody>tr>td img{
-	vertical-align: middle;
-}
-.goods-body>form>table>tbody>tr>td>.num-else{
-	color: #666;
-}
-.goods-body>form>table>tbody>tr>td>.add-diff{
-	margin: 0 5px;
-	padding: 1px 5px;
-	border: 1px solid #91C4D0;
-	background: #DDEEF2;
-	border-right: 2px solid #278296;
-	border-bottom: 2px solid #278296;
-	color: #335B64;
-}
-.goods-choose{
-	padding: 5px 15px;
-	margin: 2px 2px;
-	border: none;
-	outline: none;
-	background: #ff3f3f;
-	color: #fff;
-	cursor: pointer;
-	border-radius: 3px;
-	vertical-align: middle;
-}
-.goods-body>form>table>tbody>tr>td>.add:hover{
-	color: #EB8A3D;
-}
-.goods-body>form>table>tbody>tr>td>span{
-	vertical-align: middle;
-}
-
-.goods-last{
+.revise-last{
 	background: #fefefe;
 	text-align: center;
 	padding-bottom: 10px;
 }
-
-.addgoods-foot{
+.revise-last input{
+	padding: 5px 15px;
+	margin: 2px 2px;
+	border: none;
+	background: #ff3f3f;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.revise-foot{
 	background: #f3f3f3 url(../images/th_bg.gif) repeat-x;
 	border: 1px solid #ddd;
 	padding: 15px;
 	color: #9CACAF;
 	margin: 10px 0;
 	text-align: center;
-}
-
-.goodsbox-click{
-	display: block !important;
 }

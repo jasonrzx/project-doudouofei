@@ -40,6 +40,59 @@ router.post('/api/findlist', function(req, res, next){
 	})
 });
 
+//删除商品
+router.post('/api/delegoods', function(req, res, next){
+	var goodsname = req.body.goodsname;
+	GoodsModel.remove({goodsname: goodsname}, function(err, data){
+		var result = {
+			code: 1,
+			message: "删除成功。"
+		}
+		if(err){
+			result.code = -102;
+			result.message = "删除失败！";
+			res.json(result);
+		}else{
+			res.json(result);
+		}
+	})
+})
+
+//修改商品
+var goods;
+router.get('/api/revisegoods', function(req, res, next){
+	goods = req.query.goodsname;
+	// GoodsModel.find({goodsname: goodsname}, function(err, docs){
+	// 	res.json(docs);
+	// })
+})
+
+router.post('/api/backgoods', function(req, res, next){
+	GoodsModel.find({goodsname: goods}, function(err, docs){
+		if(err){
+			console.log(err);
+		}
+		res.json(docs);
+	})
+})
+
+router.get('/api/revampgoods', function(req, res, next){
+	var reviseprice = req.query.reviseprice;
+	var reviseinventory = req.query.reviseinventory;
+	var revisesales = req.query.revisesales;
+	GoodsModel.update({goodsname: goods}, {goodsprice: reviseprice, goodsinventory: reviseinventory, goodssales: revisesales}, {multi: true}, function(err, docs){
+		var result = {
+			code: 1,
+			message: "修改成功！"
+		}
+		if(err){
+			result.code = -107;
+			result.message = "修改失败，请重新尝试。";
+		}
+		res.json(result);
+	})
+})
+
 //分页效果
 router.post('/api/updategoods', function(req, res, next) {
 	var condition = req.body.condition;
@@ -50,7 +103,7 @@ router.post('/api/updategoods', function(req, res, next) {
 	perPageCnt = parseInt(perPageCnt); //每页显示多少
 	
 	GoodsModel.count({goodsname:{$regex: condition}}, function(err, count){
-		console.log("数量:"+count);
+		// console.log("数量:"+count);
 		var query = GoodsModel.find({goodsname: {$regex: condition}}).skip((pageNO-1)*perPageCnt).limit(perPageCnt);
 		query.exec(function(err, docs){
 			var result = {

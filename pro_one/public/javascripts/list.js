@@ -104,6 +104,7 @@ function Findcreate(elem, data, sel, page, key){
 	$(this.page).find(".sel-box>option").click(function(){
 		$(".add-goodslist").remove();
 	})
+
 }
 Findcreate.prototype = {
 	Init: function(){
@@ -119,27 +120,64 @@ Findcreate.prototype = {
 			var str = `
 				<tr class="add-goodslist">
 					<td><input type='checkbox'/>${this.num}</td>
-					<td><span>${this.data.data[i].goodsname}</span></td>
-					<td><span>${this.data.data[i].goodsnum}</span></td>
-					<td><span>${this.data.data[i].goodsprice}</span></td>
+					<td><span class="page-goodsname">${this.data.data[i].goodsname}</span></td>
+					<td><span class="page-goodsnum">${this.data.data[i].goodsnum}</span></td>
+					<td><span class="page-goodsprice">${this.data.data[i].goodsprice}</span></td>
 					<td><img src='images/yes.gif'/></td>
 					<td><img src='images/yes.gif'/></td>
 					<td><img src='images/yes.gif'/></td>
 					<td><img src='images/yes.gif'/></td>
 					<td><span>100</span></td>
-					<td><span>${this.data.data[i].goodsinventory}</span></td>
-					<td><span>${this.data.data[i].goodssales}</span></td>
+					<td><span class="page-goodsinventory">${this.data.data[i].goodsinventory}</span></td>
+					<td><span class="page-goodssales">${this.data.data[i].goodssales}</span></td>
 					<td class="goodslist-img">
 						<a><img src='images/icon_view.gif'/></a>
-						<a><img src='images/icon_edit.gif'/></a>
+						<a class="page-edit"><img src='images/icon_edit.gif'/></a>
 						<a><img src='images/icon_copy.gif'/></a>
-						<a><img src='images/icon_trash.gif'/></a>
+						<a class="page-trash"><img src='images/icon_trash.gif'/></a>
 					</td>
 				</tr>
 			`
 			$(this.elem).append(str);
 		}
-
+		//删除
+		$(".page-trash").click(function(){
+			$(this).parent().parent().remove();
+			var goodsname = $(this).parent().parent().find(".page-goodsname").html();
+			$.ajax({
+				url: "/goods/api/delegoods",
+				type: "post",
+				data: {
+					goodsname: goodsname
+				},
+				success: function(res){
+					if(res.code==1){
+						alert(res.message);
+					}else{
+						alert(res.message);
+					}
+				}
+			})
+		})
+		//修改
+		$(".page-edit").click(function(){
+			$(".list-ecshop").load("/list-revise");
+			var goodsname = $(this).parent().parent().find(".page-goodsname").html();
+			// var goodsnum = $(this).parent().parent().find(".page-goodsnum").html();
+			// var goodsprice = $(this).parent().parent().find(".page-goodsprice").html();
+			// var goodsinventory = $(this).parent().parent().find(".page-goodsinventory").html();
+			// var goodssales = $(this).parent().parent().find(".page-goodssales").html(); 
+			$.ajax({
+				url: "/goods/api/revisegoods",
+				type: "get",
+				data: {
+					goodsname: goodsname
+				},
+				success: function(res){
+					
+				}
+			})
+		})
 		$(this.sel).find("option").remove(); //移除select创建option
 		//创建option
 		for(var j=1; j<=this.ys; j++){
@@ -228,25 +266,25 @@ Findcreate.prototype = {
 }
 
 function UpAjax(url, type, keynum, pagegood, pagenum){
-		this.url =url;
-		this.type = type;
-		this.keynum = keynum;
-		this.pagegood = pagegood;
-		this.pagenum = pagenum;
-		$.ajax({
-			url: this.url,
-			type: this.type,
-			data: {
-				condition: this.keynum || "",
-				perPageCnt: this.pagegood,
-				pageNO: this.pagenum || 1
-			},
-			success: function(res){
-				//函数入口
-				new Findcreate($(".ecshop-bylist"), res, $(".sel-box"), $(".page-div"), $(".ecshop-find"));
-			}
-		})
-	}
+	this.url =url;
+	this.type = type;
+	this.keynum = keynum;
+	this.pagegood = pagegood;
+	this.pagenum = pagenum;
+	$.ajax({
+		url: this.url,
+		type: this.type,
+		data: {
+			condition: this.keynum || "",
+			perPageCnt: this.pagegood,
+			pageNO: this.pagenum || 1
+		},
+		success: function(res){
+			//函数入口
+			new Findcreate($(".ecshop-bylist"), res, $(".sel-box"), $(".page-div"), $(".ecshop-find"));
+		}
+	})
+}
 
 
 

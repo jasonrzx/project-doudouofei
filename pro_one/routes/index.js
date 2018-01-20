@@ -54,4 +54,9 @@ router.get('/list-addgoods', function(req, res, next) {
 	res.render('list-addgoods', {});
 });
 
+router.get('/list-revise', function(req, res, next) {
+	res.render('list-revise', {});
+});
+
+
 module.exports = router;

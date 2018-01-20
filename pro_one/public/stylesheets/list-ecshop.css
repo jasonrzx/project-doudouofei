@@ -109,3 +109,12 @@
 	color: #9D7250;
 	text-decoration: underline;
 }
+.add-goodslist>td{
+	text-align: center;
+	background: #fff;
+	line-height: 39px;
+	padding: 10px;
+}
+.add-goodslist>.goodslist-img{
+	padding-top: 20px;
+}

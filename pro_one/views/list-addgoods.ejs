@@ -34,7 +34,7 @@
 						<tr>
 							<td class="goods-label">商品名称 :</td>
 							<td>
-								<input type="text" name="" size="30">
+								<input id="goods-name" type="text" name="" size="30">
 								<select>
 									<option value="">字体样式</option>
 									<option value="">加粗</option>
@@ -48,7 +48,7 @@
 						<tr>
 							<td class="goods-label"><a><img src="/images/notice.gif"></a>商品货号:</td>
 							<td>
-								<input type="text" name=""><br>
+								<input id="goods-num" type="text" name=""><br>
 								<span class="num-else">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
 							</td>
 						</tr>
@@ -97,7 +97,7 @@
 						<tr>
 							<td class="goods-label">本店售价:</td>
 							<td>
-								<input type="text" value="0">
+								<input id="goods-price" type="text" value="0">
 								<input id="goods-calculate" type="button" value="按市场价计算">
 								<span class="require-field">*</span>
 							</td>
@@ -129,7 +129,7 @@
 						</tr>
 						<tr>
 							<td class="goods-label">虚拟销量:</td>
-							<td><input type="text" value="0"></td>
+							<td><input id="goods-sales" type="text" value="0"></td>
 						</tr>
 						<tr>
 							<td class="goods-label"><a><img src="images/notice.gif"></a>赠送消费积分数:</td>
@@ -209,7 +209,7 @@
 						<tr>
 							<td class="goods-label"><a><img src="images/notice.gif"></a> 商品库存数量:</td>
 							<td>
-								<input type="text" value="1" size="20"><br>
+								<input id="goods-inventory" type="text" value="1" size="20"><br>
 								<span class="num-else">库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
 							</td>
 						</tr>
@@ -312,7 +312,7 @@
 		<!--eighth-->
 		<div class="goods-body"></div>
 		<div class="goods-last">
-			<input class="goods-choose" type="button" value="确定">
+			<input class="goods-choose" type="button" value="确定" onclick="upload()">
 			<input class="goods-choose" type="button" value="重置">
 		</div>
 	</div>

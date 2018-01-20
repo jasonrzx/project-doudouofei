@@ -93,8 +93,8 @@
 				<option value="1">上架</option>
 				<option value="0">下架</option>
 			</select>
-			<label for="key" style="margin-right: 3px">关键字</label><input type="text" name="key" id="key">
-			<input type="submit" name="" value="搜索" class="ecshop-btn">
+			<label for="key" style="margin-right: 3px">关键字</label><input type="text" name="key" id="key" class="key-num">
+			<input type="button" value="搜索" class="ecshop-btn">
 		</div>
 	</div>
 	<div class="ecshop-body">
@@ -106,20 +106,19 @@
 						<a>编号</a>
 						<img src="images/sort_desc.gif">
 					</th>
-					<th><a href="">商品名称</a></th>
-					<th><a href="">货号</a></th>
-					<th><a href="">价格</a></th>
-					<th><a href="">上架</a></th>
-					<th><a href="">精品</a></th>
-					<th><a href="">新品</a></th>
-					<th><a href="">热销</a></th>
-					<th><a href="">推荐排序</a></th>
-					<th><a href="">库存</a></th>
-					<th><a href="">虚拟销量</a></th>
+					<th><a>商品名称</a></th>
+					<th><a>货号</a></th>
+					<th><a>价格</a></th>
+					<th><a>上架</a></th>
+					<th><a>精品</a></th>
+					<th><a>新品</a></th>
+					<th><a>热销</a></th>
+					<th><a>推荐排序</a></th>
+					<th><a>库存</a></th>
+					<th><a>虚拟销量</a></th>
 					<th>操作</th>
 				</tr>
-				<tr></tr>
-				<tr class="ecshop-none">
+				<tr class="ecshop-none" style="display: none">
 					<td colspan="10" style="background: #fff;">没有找到任何记录</td>
 				</tr>
 			</tbody>
@@ -130,21 +129,19 @@
 					<td>
 						<div class="page-div">
 							<span>总计</span>
-							<span>0</span>
+						  	<span class="page-all"></span>
 							<span>个记录分为</span>
-							<span>1</span>
+							<span class="page-only"></span>
 							<span>页当前第</span>
-							<span>1</span>
+							<span class="page-now"></span>
 							<span>页，每页</span>
-							<input type="text" value="15" size="3">
+							<input class="page-num" type="text" value="12" size="3">
 							<span>
-								<a href="">第一页</a>
-								<a href="">上一页</a>
-								<a href="">下一页</a>
-								<a href="">最末页</a>
-								<select>
-									<option value="1">1</option>
-								</select>
+								<a class="page-first">第一页</a>
+								<a class="page-up">上一页</a>
+								<a class="page-next">下一页</a>
+								<a class="page-last">最末页</a>
+								<select class="sel-box" onchange="update()"></select>
 							</span>
 						</div>
 					</td>
@@ -173,4 +170,5 @@
 		<span>版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</span>
 	</div>
 </body>
+<script type="text/javascript" src="/javascripts/list-ecshop.js"></script>
 </html>
